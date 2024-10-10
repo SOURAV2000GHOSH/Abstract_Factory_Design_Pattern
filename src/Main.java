@@ -1,9 +1,11 @@
-import pizzastore.NYPizzaStore;
-import pizzastore.PizzaStore;
+import abstractFactroryClasses.NYPizzaStore;
+import abstractFactroryClasses.PizzaStore;
+import pizzas.Pizza;
 
 public class Main {
 	public static void main(String[] args) {
 		PizzaStore pizzaStore = new NYPizzaStore();
-		pizzaStore.orderPizza("veggie");
+		Pizza pizza = pizzaStore.orderPizza("veggie");
+		pizza.getDough().display();
 	}
 }
